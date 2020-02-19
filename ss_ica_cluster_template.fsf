@@ -1,12 +1,3 @@
-# # ------------------------------------------------------------------------------
-# Script name:  ss_ica_cluster_template.fsf
-#
-# Description:  Template file for running single subject ICA on Biobank-matched data
-#
-#
-# Author:       Caroline Nettekoven, 2020
-#
-# ------------------------------------------------------------------------------
 
 # FEAT version number
 set fmri(version) 3.15
@@ -233,7 +224,7 @@ set fmri(reginitial_highres_yn) 1
 set fmri(reginitial_highres_search) 90
 
 # Degrees of Freedom for registration to initial structural
-set fmri(reginitial_highres_dof) 3
+set fmri(reginitial_highres_dof) 6
 
 # Registration to main structural
 set fmri(reghighres_yn) 1
@@ -269,7 +260,7 @@ set fmri(regstandard_dof) 12
 set fmri(regstandard_nonlinear_yn) 1
 
 # Control nonlinear warp field resolution
-set fmri(regstandard_nonlinear_warpres) 10
+set fmri(regstandard_nonlinear_warpres) 10 
 
 # High pass filter cutoff
 set fmri(paradigm_hp) 100
@@ -291,10 +282,10 @@ set feat_files(2) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/X
 set fmri(confoundevs) 0
 
 # Session's alternate reference image for analysis 1
-set alt_ex_func(1) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-1_bold"
+set alt_ex_func(1) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-1_bold_biascorr_brain"
 
 # Session's alternate reference image for analysis 2
-set alt_ex_func(2) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-2_bold"
+set alt_ex_func(2) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-2_bold_biascorr_brain"
 
 # B0 unwarp input image for analysis 1
 set unwarp_files(1) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/derivatives/XXX/YYY/fmap/XXX_ZZZ_rads"
@@ -309,10 +300,10 @@ set unwarp_files_mag(1) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir
 set unwarp_files_mag(2) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/derivatives/XXX/YYY/fmap/XXX_ZZZ_magnitude_brain"
 
 # Session's structural image for analysis 1
-set initial_highres_files(1) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-1_bold"
+set initial_highres_files(1) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-1_bold_biascorr_brain"
 
 # Session's structural image for analysis 2
-set initial_highres_files(2) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-2_bold"
+set initial_highres_files(2) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/raw/XXX/YYY/func/XXX_ZZZ_task-sbref_acq-2_bold_biascorr_brain"
 
 # Subject's structural image for analysis 1
 set highres_files(1) "/home/fs0/leahm/scratch/Joystick_Cereb-MRS/Data/bidsdir/derivatives/XXX/YYY/anat/T1.anat/T1_biascorr_brain"
